@@ -1,12 +1,16 @@
 #include <iostream>
-#include <string> // Include string for std::string
-
+#include <string> 
 using namespace std;
 
-class Result {
-private:
+class Person {
+public:
     int rollNo, M[5];
     string name;
+};
+
+
+class Result  : public Person{
+
 
 public:
 
@@ -22,8 +26,12 @@ public:
         getline(cin, name);
     
         for (int i = 0; i < 5; i++) {
-            cout << "Enter Marks for Subject " << (i + 1) << ": ";
-            cin >> M[i];
+            do {      
+                      cout << "Enter Marks for Subject " << (i + 1) << ": ";
+                 cin >> M[i];
+            }
+            while(M[i] < 0 || M[i] > 100);
+
         }
     }
 
@@ -46,15 +54,71 @@ public:
 
     double avg() {
         return Total() / 5.0; 
+
     }
+
+    void grade(){
+        int average = avg();
+
+        if(average > 90 && average < 100){
+            cout << "You Got A Grade\n";
+        }
+        else if (average > 80 && average < 89) {
+            cout << "You Got B Grade\n";
+        }
+         else if (average > 70 && average < 79) {
+            cout << "You Got C Grade\n";
+        }
+         else if (average > 60 && average < 69) {
+            cout << "You Got D Grade\n";
+        }
+        else {
+            cout << "You Got F Grade\n";
+        }
+
+    }
+
+    double highest(){
+        int max = INT_MIN;
+    
+    for (int i = 0; i< 5; i++){
+        if (M[i] > max)
+        max = M[i];
+        
+    }
+        return max;
+    }
+    double lowest(){
+        int lowest = INT_MAX;
+ for (int i = 0; i< 5; i++){
+        if (M[i] < lowest)
+        lowest = M[i];
+        
+    }
+
+    return lowest;
+    }
+   
+    
+    
+    
+
+
 };
 
 int main() {
     Result R;
     R.input();
-    R.show();
+    R.show(); 
+    
     cout << "Total Marks : " << R.Total()  << endl; 
-    cout << "Average : " << R.avg()  << endl;       
+    cout << "Average : " << R.avg()  << endl;  
+    cout << "Highest No. :" << R.highest() << endl;
+    cout << "Lowest No. :" << R.lowest() << endl;  
+
+
+    R.grade();
+    
 
     return 0; 
 }
