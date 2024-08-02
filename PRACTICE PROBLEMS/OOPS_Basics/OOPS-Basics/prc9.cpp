@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 
@@ -38,10 +39,11 @@ void input(){
 }
 
     void getinfo(){
-        cout << "Employee name: " << name << endl;
-        cout >> "Employee id " << id << endl;
-        cout << "Employee Performance : " <<  performance<<endl;
+        cout << name << endl;
+        cout << id << endl;
+        cout << performance<<endl;
         
+        cout << "Total Salary : " << salary;
     }
 };
 
