@@ -212,4 +212,80 @@ int main() {
     return 0;
 }
 ```
-    
+# Projects
+
+## Virtual Pet Game
+
+### Description
+A C++ application that simulates taking care of a virtual pet. Users can feed, play with, and take care of their pet, observing its health and happiness levels.
+
+### Technologies Used
+- C++
+- Object-Oriented Programming
+
+### Installation Instructions
+1. Clone the repository: `git clone (https://github.com/khawajaacode/OOPS/tree/main/Projects`
+2. Navigate to the project directory: `cd virtual-pet-game`
+3. Build the project: `make`
+
+### Usage
+Run the application using: `./virtual_pet_game`
+
+---
+
+## Interactive Story Game
+
+### Description
+An interactive story game where users make choices that affect the storyline. Built using C++ with an emphasis on OOP principles.
+
+### Technologies Used
+- C++
+- Object-Oriented Programming
+
+### Installation Instructions
+1. Clone the repository: `git clone https://github.com/khawajaacode/OOPS/tree/main/Projects`
+2. Navigate to the project directory: `cd interactive-story-game`
+3. Build the project: `make`
+
+### Usage
+Run the application using: `./interactive_story_game`
+
+---
+
+## Virtual Library System
+
+### Description
+A virtual library system that allows users to manage a collection of books. Features include viewing, borrowing, and returning books.
+
+### Technologies Used
+- C++
+- Object-Oriented Programming
+
+### Installation Instructions
+1. Clone the repository: `git clone https://github.com/khawajaacode/OOPS/tree/main/Projects)`
+2. Navigate to the project directory: `cd virtual-library-system`
+3. Build the project: `make`
+
+### Usage
+Run the application using: `./virtual_library_system`
+
+---
+
+## Smart Home Automation System
+
+### Description
+A C++ project that simulates a smart home automation system, including features like controlling lights, thermostat, and security systems.
+
+### Technologies Used
+- C++
+- Object-Oriented Programming
+
+### Installation Instructions
+1. Clone the repository: `git clone https://github.com/khawajaacode/OOPS/tree/main/Projects`
+2. Navigate to the project directory: `cd smart-home-automation-system`
+3. Build the project: `make`
+
+### Usage
+Run the application using: `./smart_home_automation_system`
+
+
