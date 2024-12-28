@@ -1,0 +1,7 @@
+1. Stream Basics
+What is a Stream?
+A stream represents a flow of data (input or output).
+Examples include cin (input from the keyboard) and cout (output to the console).
+Advantages:
+Simplicity: Easy to use for data I/O.
+Operator Overloading: Operators like << (insertion) and >> (extraction) are overloaded for convenient input/output.
