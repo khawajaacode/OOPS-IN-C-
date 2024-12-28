@@ -1,0 +1,5 @@
+Apple 1.50
+Banana 0.75 
+Laptop 799.99 
+Headphones 29.99 
+Coffee Mug 12.50 
