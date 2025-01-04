@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// Base Class for Employee
+
 class Employee {
 protected:
     int id;
@@ -21,7 +21,7 @@ public:
              << ", Performance Review: " << performanceReview << endl;
     }
 
-    virtual void calculateSalary() = 0; // Pure virtual function
+    virtual void calculateSalary() = 0; 
 
     int getId() const {
         return id;
@@ -51,10 +51,10 @@ public:
         this->performanceReview = performanceReview;
     }
 
-    virtual ~Employee() {} // Virtual destructor for polymorphism
+    virtual ~Employee() {}
 };
 
-// Manager Class Derived from Employee
+
 class Manager : public Employee {
     float bonus;
 
@@ -72,7 +72,7 @@ public:
     }
 };
 
-// Developer Class Derived from Employee
+
 class Developer : public Employee {
     int projectsCompleted;
 
@@ -86,11 +86,11 @@ public:
     }
 
     void calculateSalary() override {
-        salary += projectsCompleted * 100; // Example calculation
+        salary += projectsCompleted * 100; 
     }
 };
 
-// Intern Class Derived from Employee
+
 class Intern : public Employee {
     string universityName;
 
@@ -104,22 +104,22 @@ public:
     }
 
     void calculateSalary() override {
-        // Implement stipend calculation if needed
+        
     }
 };
 
-// Employee Management System Class
+
 class EmployeeManagementSystem {
     vector<Employee*> employees;
 
 public:
-    // Add a new Employee
+    
     void addEmployee(Employee* emp) {
         employees.push_back(emp);
         cout << "Employee added successfully!\n";
     }
 
-    // Remove an Employee by ID
+    
     void removeEmployee(int id) {
         for (auto it = employees.begin(); it != employees.end(); ++it) {
             if ((*it)->getId() == id) {
@@ -132,7 +132,7 @@ public:
         cout << "Employee with ID " << id << " not found.\n";
     }
 
-    // Update Employee Details
+   
     void updateEmployeeDetails(int id, const string& name, float salary, const string& performanceReview) {
         for (auto& emp : employees) {
             if (emp->getId() == id) {
@@ -146,7 +146,7 @@ public:
         cout << "Employee with ID " << id << " not found.\n";
     }
 
-    // Display all Employees
+   
     void listEmployees() const {
         if (employees.empty()) {
             cout << "No employees in the system.\n";
@@ -159,7 +159,7 @@ public:
         }
     }
 
-    // Generate a report of all employees
+    
     void generateReport() const {
         if (employees.empty()) {
             cout << "No employees in the system.\n";
@@ -168,7 +168,7 @@ public:
         cout << "\nEmployee Report:\n";
         for (const auto& emp : employees) {
             emp->displayDetails();
-            emp->calculateSalary(); // Ensure salary is up-to-date
+            emp->calculateSalary(); 
             cout << "----------------------\n";
         }
     }
@@ -178,7 +178,7 @@ public:
     }
 };
 
-// Main Function
+
 int main() {
     EmployeeManagementSystem system;
     int choice;
