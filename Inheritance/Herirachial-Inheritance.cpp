@@ -31,10 +31,10 @@ class TA : public Student, public Teacher{
 
 int main() {
 TA t1;
-t1.name = "Tom Cruise";
+t1.Student::name = "Tom Cruise";
 t1.subj = "Math";
 
-cout << t1.name <<endl;
+cout << t1.Student::name <<endl;
 cout << t1.subj <<endl;
 
 

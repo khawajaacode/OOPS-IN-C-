@@ -18,13 +18,23 @@ class Print {
 
 };
 
-
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+};
 
 
 int main() {
 Print p1;
 // p1.show(101); Shows Interger Value.
 p1.show('&');
-
+    Calculator calc;
+    cout << "Integer addition: " << calc.add(5, 10) << endl;
+    cout << "Double addition: " << calc.add(5.5, 10.5) << endl;
     return 0;
 }

@@ -1,0 +1,2 @@
+    ptr = &r;
+    ptr ->area();
